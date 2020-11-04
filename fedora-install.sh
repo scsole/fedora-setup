@@ -17,6 +17,9 @@ sudo tee /etc/sysctl.d/40-max-user-watches.conf > /dev/null <<EOF
 fs.inotify.max_user_watches=524288
 EOF
 
+# Ensure system clock is in UTC (defaults to RTC if dual booting alongside Windows)
+sudo timedatectl set-local-rtc 0
+
 
 
 #
