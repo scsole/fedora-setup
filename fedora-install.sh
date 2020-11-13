@@ -54,7 +54,7 @@ sudo dnf distro-sync -y
 
 PKGS=(
     'vim-enhanced'              # VIM editor with all recent enhancements
-    'mpv'                       # A great media player
+    'gthumb'                    # Image viewer, editor, organizer
     'lm_sensors'                # Hardware monitoring tools
     'neofetch'                  # System info tool
     'bashtop'                   # Awesome resource monitor
@@ -62,17 +62,26 @@ PKGS=(
     'iotop'                     # I/O monitor
     'exfat-utils'               # Utilities for exFAT file systems
     'bsdtar'                    # Manipulate tape archives
-    'ffmpeg'                    # Adds Codec Support to Firefox, and in general
     'filezilla'                 # S/FTP client
     'transmission'              # Lightweight BitTorrent client
+    'sqlitebrowser'             # Create, design, and edit SQLite databases
     'gnome-shell-extension-dash-to-dock' # Dock for GNOME shell
     'gnome-shell-extension-gamemode' # Status indicator for GameMode
     'gnome-extensions-app'      # GNOME extensions manager
     'hydrapaper'                # Set different backgrounds on each monitor
     'enpass'                    # Password manager
-    'HandBrake'                 # Open-source multiplatform video transcoder (GUI)
-    'HandBrake-cli'             # Open-source multiplatform video transcoder
-    'sqlitebrowser'             # Create, design, and edit SQLite databases
+
+    # Media & codecs
+    'ffmpeg'
+    'mediainfo'
+    'mediainfo-gui'
+    'mkvtoolnix-gui'
+    'HandBrake'
+    'HandBrake-cli'
+
+    # Communication
+    'discord'
+    'telegram-desktop'
 
     # Dev
     'vagrant'
@@ -87,6 +96,8 @@ PKGS=(
 
 sudo dnf install -y "${PKGS[@]}"
 
+# Remove unneeded packages
+sudo dnf remove -y totem
 
 
 #
@@ -95,8 +106,6 @@ sudo dnf install -y "${PKGS[@]}"
 
 FLATHUB_PKGS=(
     'org.signal.Signal'         # Signal desktop client
-    'org.telegram.desktop'      # Telegram desktop client
-    'com.discordapp.Discord'    # Discord desktop client
     'com.valvesoftware.Steam'   # Steam
 )
 
