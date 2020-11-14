@@ -79,8 +79,8 @@ PKGS=(
     'mediainfo'
     'mediainfo-gui'
     'mkvtoolnix-gui'
-    'HandBrake'
-    'HandBrake-cli'
+    'handbrake'
+    'handbrake-gui'
 
     # Communication
     'discord'
